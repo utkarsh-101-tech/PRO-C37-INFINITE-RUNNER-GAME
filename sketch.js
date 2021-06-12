@@ -29,7 +29,7 @@ function setup() {
   //background
    back=createSprite(0,200,displayWidth,displayHeight);
   back.addImage("back",backImg);
-  back.scale=6;
+  back.scale=4;
   
   //creating monkey
   monkey = createSprite(displayWidth/8,displayHeight-250,20,50);
@@ -114,7 +114,7 @@ function draw()
 
 function food(){                 //function for creating food at every 130 sec
  if(frameCount%13==0){
-   banana = createSprite(displayWidth,displayHeight/4,40,10);
+   banana = createSprite(displayWidth,displayHeight-500,40,10);
    banana.addImage("banana",bananaImg);
    banana.scale=0.06;
    banana.velocityX=-5;
@@ -126,7 +126,7 @@ function food(){                 //function for creating food at every 130 sec
 
 function obstacle(){               //function for creating stone at every 300 sec
 if(frameCount%30==0){
-  obs = createSprite(displayWidth,displayHeight-300,10,40);
+  obs = createSprite(displayWidth,displayHeight-500,10,40);
   obs.addImage("Stone",obsImg);
   obs.scale=0.12;
   obs.velocityX=-6;
